@@ -1,0 +1,128 @@
+[
+	{
+		"code": "INTERNAL_FRAUD",
+		"framework": "Basel",
+		"label": "Internal Fraud",
+		"description": "Acts of fraud/misappropriation involving at least one internal party."
+	},
+	{
+		"code": "EXTERNAL_FRAUD",
+		"framework": "Basel",
+		"label": "External Fraud",
+		"description": "Acts of fraud by a third party."
+	},
+	{
+		"code": "EMPLOYMENT_PRACTICES",
+		"framework": "Basel",
+		"label": "Employment Practices & Workplace Safety",
+		"description": "Acts inconsistent with employment, health or safety laws."
+	},
+	{
+		"code": "CLIENTS_PRODUCTS_PRACTICES",
+		"framework": "Basel",
+		"label": "Clients, Products & Business Practices",
+		"description": "Unintentional or negligent failure to meet a professional obligation to clients."
+	},
+	{
+		"code": "DAMAGE_PHYSICAL_ASSETS",
+		"framework": "Basel",
+		"label": "Damage to Physical Assets",
+		"description": "Loss or damage to physical assets from disaster or other events."
+	},
+	{
+		"code": "BUSINESS_DISRUPTION",
+		"framework": "Basel",
+		"label": "Business Disruption & System Failures",
+		"description": "Disruption of business or system failures."
+	},
+	{
+		"code": "EXECUTION_DELIVERY",
+		"framework": "Basel",
+		"label": "Execution, Delivery & Process Management",
+		"description": "Failed transaction processing or process management."
+	},
+	{
+		"code": "COSO_GOVERNANCE_CULTURE",
+		"framework": "COSO",
+		"label": "Governance & Culture",
+		"description": "Board oversight, organizational structure, commitment to integrity."
+	},
+	{
+		"code": "COSO_STRATEGY_OBJECTIVES",
+		"framework": "COSO",
+		"label": "Strategy & Objective-Setting",
+		"description": "Risk appetite defined and aligned with strategy."
+	},
+	{
+		"code": "COSO_PERFORMANCE",
+		"framework": "COSO",
+		"label": "Performance",
+		"description": "Identifying and assessing risks that affect performance."
+	},
+	{
+		"code": "COSO_REVIEW_REVISION",
+		"framework": "COSO",
+		"label": "Review & Revision",
+		"description": "Assessing substantial change and reviewing risk/performance."
+	},
+	{
+		"code": "COSO_INFO_COMMUNICATION",
+		"framework": "COSO",
+		"label": "Information, Communication & Reporting",
+		"description": "Leveraging information systems and communicating risk info."
+	},
+	{
+		"code": "ISO31000_LIKELIHOOD",
+		"framework": "ISO31000",
+		"label": "Likelihood Scale",
+		"description": "Rare, Unlikely, Possible, Likely, Almost Certain."
+	},
+	{
+		"code": "ISO31000_IMPACT",
+		"framework": "ISO31000",
+		"label": "Impact Scale",
+		"description": "Insignificant, Minor, Moderate, Major, Severe."
+	},
+	{
+		"code": "ISA_EXISTENCE",
+		"framework": "ISA",
+		"label": "Existence",
+		"description": "Assets, liabilities and equity interests exist."
+	},
+	{
+		"code": "ISA_COMPLETENESS",
+		"framework": "ISA",
+		"label": "Completeness",
+		"description": "All transactions and balances that should be recorded have been recorded."
+	},
+	{
+		"code": "ISA_ACCURACY",
+		"framework": "ISA",
+		"label": "Accuracy",
+		"description": "Amounts and other data have been recorded appropriately."
+	},
+	{
+		"code": "ISA_VALUATION",
+		"framework": "ISA",
+		"label": "Valuation",
+		"description": "Assets, liabilities and equity interests are included at appropriate amounts."
+	},
+	{
+		"code": "ISA_RIGHTS_OBLIGATIONS",
+		"framework": "ISA",
+		"label": "Rights & Obligations",
+		"description": "The entity holds the rights to assets and owes the obligations recorded."
+	},
+	{
+		"code": "ISA_PRESENTATION_DISCLOSURE",
+		"framework": "ISA",
+		"label": "Presentation & Disclosure",
+		"description": "Items are appropriately presented, described and disclosed."
+	},
+	{
+		"code": "ISA_CUTOFF",
+		"framework": "ISA",
+		"label": "Cut-off",
+		"description": "Transactions have been recorded in the correct accounting period."
+	}
+]

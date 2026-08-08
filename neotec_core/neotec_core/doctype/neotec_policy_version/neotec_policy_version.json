@@ -1,0 +1,135 @@
+{
+ "doctype": "DocType",
+ "name": "Neotec Policy Version",
+ "module": "Neotec Core",
+ "custom": 0,
+ "istable": 0,
+ "issingle": 0,
+ "track_changes": 1,
+ "autoname": "format:POL-{app}-{policy_name}-{version}",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "app",
+   "fieldtype": "Data",
+   "label": "App",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Namespace of the calling vertical, e.g. neotec_risk_grc"
+  },
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "label": "Policy Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Review\nApproved\nRejected\nRetired",
+   "default": "Draft",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From"
+  },
+  {
+   "fieldname": "section_payload",
+   "fieldtype": "Section Break",
+   "label": "Payload"
+  },
+  {
+   "fieldname": "payload_json",
+   "fieldtype": "Code",
+   "label": "Payload (JSON)",
+   "options": "JSON",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_trail",
+   "fieldtype": "Section Break",
+   "label": "Approval Trail"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "submitted_on",
+   "fieldtype": "Datetime",
+   "label": "Submitted On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Approved On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason",
+   "depends_on": "eval:doc.status=='Rejected'"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0
+  },
+  {
+   "role": "Neotec Suite Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Neotec Suite User",
+   "read": 1
+  }
+ ],
+ "title_field": "policy_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "app,version,status"
+}

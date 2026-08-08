@@ -1,0 +1,124 @@
+{
+ "doctype": "DocType",
+ "name": "Neotec Escalation Rule",
+ "module": "Neotec Core",
+ "custom": 0,
+ "istable": 0,
+ "issingle": 0,
+ "engine": "InnoDB",
+ "autoname": "field:rule_name",
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_target",
+   "fieldtype": "Section Break",
+   "label": "What to Watch"
+  },
+  {
+   "fieldname": "target_doctype",
+   "fieldtype": "Link",
+   "label": "Target DocType",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "watch_field",
+   "fieldtype": "Data",
+   "label": "Watch Field",
+   "reqd": 1,
+   "description": "Fieldname on the target doctype whose value marks a breach state, e.g. 'status'"
+  },
+  {
+   "fieldname": "watch_value",
+   "fieldtype": "Data",
+   "label": "Watch Value",
+   "reqd": 1,
+   "description": "Value that counts as a breach, e.g. 'Open' or 'Overdue'"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timestamp_field",
+   "fieldtype": "Data",
+   "label": "Timestamp Field",
+   "reqd": 1,
+   "description": "Fieldname to measure elapsed time against, e.g. 'creation' or 'due_date'"
+  },
+  {
+   "fieldname": "threshold_hours",
+   "fieldtype": "Float",
+   "label": "Escalate After (hours)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_action",
+   "fieldtype": "Section Break",
+   "label": "Escalation Action"
+  },
+  {
+   "fieldname": "escalate_to_role",
+   "fieldtype": "Link",
+   "label": "Escalate To Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "escalate_to_user",
+   "fieldtype": "Link",
+   "label": "Escalate To User",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "options": "System\nWebhook",
+   "default": "System"
+  },
+  {
+   "fieldname": "webhook_url",
+   "fieldtype": "Data",
+   "label": "Webhook URL",
+   "depends_on": "eval:doc.channel=='Webhook'"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Neotec Suite Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ],
+ "title_field": "rule_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "target_doctype,escalate_to_role",
+ "track_changes": 1
+}
